@@ -6,7 +6,7 @@
 /*   By: nkawaguc <nkawaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 12:53:27 by nkawaguc          #+#    #+#             */
-/*   Updated: 2026/10/19 13:35:47 by nkawaguc         ###   ########.fr       */
+/*   Updated: 2026/11/07 13:52:27 by nkawaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,19 @@ typedef struct s_file
 	char			*path; // Absolute path or relative path from the CWD
 	char			*absolute_name;
 	bool			is_operand; // true if this file is an operand
-	t_filetype		type;
-	struct stat		st;
-	bool			stat_ok;
-	struct timespec	btime;
-	bool			btime_ok;
-	char			*linkname;
-	mode_t			linkmode;
-	bool			linkok;
-	t_acl_type		acl_type;
-	char			*scontext;
-	bool			has_capability;
-	int				quoted;
-	size_t			width;
+	t_filetype		type; // file type
+	struct stat		st; // file status information
+	bool			stat_ok; // true if the stat() call was successful
+	struct timespec	btime; // birth time (creation time)
+	bool			btime_ok; // true if the birth time is available
+	char			*linkname; // target of the symbolic link
+	mode_t			linkmode; // mode of the symbolic link
+	bool			linkok; // true if the symbolic link is valid
+	t_acl_type		acl_type; // type of ACL (Access Control List)
+	char			*scontext; // SELinux security context
+	bool			has_capability; // true if the file has capabilities
+	int				quoted; // 0: no quotes, 1: single quotes, 2: double quotes
+	size_t			width; // width of the file name for formatting
 }	t_file;
 
 #endif
