@@ -6,7 +6,7 @@
 /*   By: nkawaguc <nkawaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 12:53:27 by nkawaguc          #+#    #+#             */
-/*   Updated: 2026/11/07 13:52:27 by nkawaguc         ###   ########.fr       */
+/*   Updated: 2026/11/07 14:11:45 by nkawaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef enum e_acl_type
 	ACL_T_NONE,
 	ACL_T_CONTEXT_ONLY,
 	ACL_T_YES,
-    ACL_T_UNKNOWN
+	ACL_T_UNKNOWN,
 }	t_acl_type;
 
 typedef struct s_file
