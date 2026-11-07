@@ -6,7 +6,7 @@
 /*   By: nkawaguc <nkawaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 14:28:25 by nkawaguc          #+#    #+#             */
-/*   Updated: 2026/11/07 14:33:31 by nkawaguc         ###   ########.fr       */
+/*   Updated: 2026/11/07 14:47:28 by nkawaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 typedef enum e_key
 {
+	KEY_FILTER, // Filter option
 }	t_key;
 
 #endif // OPTKEY_H
